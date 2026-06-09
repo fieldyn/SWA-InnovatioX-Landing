@@ -1,7 +1,23 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C \"D:\\\\amplify\\\\innovatiox\\\\SWA\" ls-files)"
+      "Bash(git -C \"D:\\\\amplify\\\\innovatiox\\\\SWA\" ls-files)",
+      "Bash(openspec --version)",
+      "Bash(where.exe openspec *)",
+      "Bash(openspec new *)",
+      "Bash(openspec status *)",
+      "Bash(find \"openspec/changes/modernize-landing-visuals\" -type f)",
+      "Bash(cat \"openspec/changes/modernize-landing-visuals/.openspec.yaml\")",
+      "Bash(openspec instructions *)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('applyRequires:', d['applyRequires']\\); [print\\(f\\\\\"  {a['id']:10} {a['status']}\\\\\"\\) for a in d['artifacts']]\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('isComplete:', d['isComplete']\\); print\\('applyRequires:', d['applyRequires']\\); [print\\(f\\\\\"  {a['id']:10} {a['status']:8} -> {a['outputPath']}\\\\\"\\) for a in d['artifacts']]\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName']\\); print\\('isComplete:', d['isComplete']\\)\")",
+      "Bash(npm run *)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); p=d['progress']; print\\(f\\\\\"Progress: {p['complete']}/{p['total']} complete, {p['remaining']} remaining\\\\\"\\); print\\('Remaining:'\\); [print\\('  -', t['description']\\) for t in d['tasks'] if not t['done']]\")",
+      "Bash(openspec archive *)",
+      "Bash(openspec list *)"
     ]
   }
 }

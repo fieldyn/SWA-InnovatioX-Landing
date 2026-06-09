@@ -1,0 +1,199 @@
+<!doctype html>
+<!--
+  Source for public/og.png (1200x630 Open Graph card).
+  Regenerate after editing with (PowerShell, from the repo root):
+
+  & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless --disable-gpu `
+    --hide-scrollbars --window-size=1200,630 --virtual-time-budget=5000 `
+    --screenshot="$PWD\public\og.png" "file:///$($PWD -replace '\\','/')/scripts/og-image.html"
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=Newsreader:opsz,wght@6..72,400;500&family=Source+Sans+3:wght@400;500&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        position: relative;
+        font-family: 'Source Sans 3', sans-serif;
+        color: #f1f5f9;
+        background: #06090f;
+        background-image:
+          radial-gradient(760px 420px at 0% -10%, rgba(56, 189, 248, 0.2) 0%, transparent 62%),
+          radial-gradient(680px 520px at 100% 12%, rgba(168, 85, 247, 0.18) 0%, transparent 62%),
+          radial-gradient(820px 560px at 55% 115%, rgba(139, 92, 246, 0.16) 0%, transparent 64%);
+      }
+
+      .dots {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba(148, 163, 184, 0.2) 1.4px, transparent 1.4px);
+        background-size: 30px 30px;
+        -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, transparent 78%);
+        opacity: 0.4;
+      }
+
+      .frame {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        padding: 0 92px;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-family: 'Chakra Petch', monospace;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #38bdf8;
+        margin-bottom: 30px;
+      }
+
+      .eyebrow::before {
+        content: '';
+        width: 44px;
+        height: 2px;
+        background: currentColor;
+      }
+
+      .wordmark {
+        font-family: 'Newsreader', serif;
+        font-size: 124px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        margin-bottom: 34px;
+      }
+
+      .wordmark .x {
+        background: linear-gradient(135deg, #38bdf8 0%, #8b5cf6 55%, #a855f7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .wordmark .tld {
+        color: #64748b;
+        font-weight: 400;
+        font-size: 72px;
+      }
+
+      .tagline {
+        font-size: 30px;
+        line-height: 1.5;
+        color: #cbd5e1;
+        max-width: 640px;
+        margin-bottom: 44px;
+      }
+
+      .chips {
+        display: flex;
+        gap: 16px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 26px;
+        font-family: 'Chakra Petch', monospace;
+        font-size: 21px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        color: #cbd5e1;
+        border: 1.5px solid rgba(148, 163, 184, 0.26);
+        border-radius: 999px;
+        background: rgba(13, 20, 38, 0.7);
+      }
+
+      .chip::before {
+        content: '';
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #38bdf8;
+      }
+
+      .chip.violet::before {
+        background: #8b5cf6;
+      }
+
+      .chip.purple::before {
+        background: #a855f7;
+      }
+
+      .mark-card {
+        flex-shrink: 0;
+        padding: 34px;
+        background: linear-gradient(180deg, rgba(19, 28, 51, 0.9), rgba(13, 20, 38, 0.95));
+        border: 1.5px solid rgba(148, 163, 184, 0.24);
+        border-radius: 44px;
+        box-shadow: 0 40px 100px rgba(2, 6, 16, 0.7);
+        transform: rotate(-3deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dots"></div>
+
+    <div class="frame">
+      <div>
+        <div class="eyebrow">.NET · Payments · Cloud</div>
+        <div class="wordmark">
+          innovatio<span class="x">X</span><span class="tld">.com</span>
+        </div>
+        <div class="tagline">
+          Independent consulting for payment systems, identity, integrations &amp; pragmatic
+          cloud modernization.
+        </div>
+        <div class="chips">
+          <span class="chip">Payments</span>
+          <span class="chip violet">Identity</span>
+          <span class="chip purple">Azure</span>
+        </div>
+      </div>
+
+      <svg width="280" height="280" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="mark-card">
+        <defs>
+          <linearGradient id="og-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="55%" stop-color="#8b5cf6" />
+            <stop offset="100%" stop-color="#a855f7" />
+          </linearGradient>
+          <filter id="og-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        <rect width="120" height="120" rx="26.4" fill="#0f172a" />
+        <rect x="6" y="6" width="108" height="108" rx="23.8" fill="none" stroke="rgba(148, 163, 184, 0.10)" stroke-width="1" />
+        <g filter="url(#og-glow)">
+          <line x1="32" y1="32" x2="88" y2="88" stroke="url(#og-grad)" stroke-width="18" stroke-linecap="round" />
+          <line x1="88" y1="32" x2="32" y2="88" stroke="url(#og-grad)" stroke-width="18" stroke-linecap="round" />
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>

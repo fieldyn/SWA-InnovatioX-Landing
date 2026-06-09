@@ -44,6 +44,7 @@
   --ix-border: rgba(148, 163, 184, 0.1);
   --ix-border-strong: rgba(148, 163, 184, 0.22);
   --ix-hairline: rgba(148, 163, 184, 0.06);
+  --ix-scrollbar-thumb: rgba(148, 163, 184, 0.32);
 
   --ix-shadow-soft: 0 24px 60px rgba(2, 6, 16, 0.5);
   --ix-shadow-strong: 0 34px 90px rgba(2, 6, 16, 0.7);
@@ -82,6 +83,7 @@
   --ix-border: rgba(15, 23, 42, 0.08);
   --ix-border-strong: rgba(15, 23, 42, 0.18);
   --ix-hairline: rgba(15, 23, 42, 0.05);
+  --ix-scrollbar-thumb: rgba(15, 23, 42, 0.28);
 
   --ix-shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.06);
   --ix-shadow-strong: 0 34px 90px rgba(15, 23, 42, 0.12);
@@ -106,6 +108,8 @@ html {
   background: var(--ix-bg);
   scroll-behavior: smooth;
   animation: ix-grad-rotate 16s linear infinite;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ix-scrollbar-thumb) transparent;
 }
 
 body {
@@ -2477,4 +2481,102 @@ a.footer__link:hover::after {
 
 .closing-cta__btn:hover svg {
   transform: translateX(3px);
+}
+
+/* ============================================================
+   Polish layer (change: aesthetic-refinements)
+   Typography wrapping, themed scrollbar, anchor offsets,
+   service-icon micro-interaction, theme view transition.
+   ============================================================ */
+
+/* --- Typography: no orphan words in headings/leads --- */
+.hero__title,
+.services__title,
+.about__title,
+.tech__title,
+.contact__title,
+.closing-cta__title,
+.card__title,
+.strength__title {
+  text-wrap: balance;
+}
+
+.hero__lead,
+.services__intro,
+.about__lead,
+.tech__lead,
+.contact__lead,
+.closing-cta__lead,
+.card__desc,
+.strength__desc,
+.footer__tagline {
+  text-wrap: pretty;
+}
+
+/* --- Themed scrollbar (WebKit fallback; Chromium/Firefox use scrollbar-color) --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ix-scrollbar-thumb);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+/* --- Anchor landing offset under the fixed header --- */
+.services,
+.about,
+.tech,
+.contact {
+  scroll-margin-top: 4.5rem;
+}
+
+/* --- Service icon micro-interaction: pop + stroke redraw --- */
+.card__icon-wrap {
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.card:hover .card__icon-wrap {
+  transform: translateY(-2px) rotate(-4deg) scale(1.07);
+  border-color: rgba(56, 189, 248, 0.38);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  /* 110 exceeds the longest subpath in the 32x32 icons, so the resting state shows full strokes */
+  .card__icon-wrap svg * {
+    stroke-dasharray: 110;
+  }
+
+  .card:hover .card__icon-wrap svg * {
+    animation: ix-icon-redraw 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+}
+
+@keyframes ix-icon-redraw {
+  from {
+    stroke-dashoffset: 110;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* --- Theme toggle circular reveal (View Transitions API) --- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-image-pair(root) {
+  isolation: auto;
 }
