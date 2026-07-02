@@ -215,7 +215,7 @@ export const siteContent: Record<Language, SiteContent> = {
           title: 'Payment &',
           titleEm: 'integration systems.',
           description:
-            'Message-oriented transaction flows, routing logic, gateway connectivity, and the operational rigor required in payment environments.',
+            'Message-oriented transaction flows, routing logic, and ISO 8583 / XML host integrations with processors and acquirers such as Fiserv, Elavon, TSYS, and Chase Paymentech — with the operational rigor payment environments demand.',
           bullets: [],
           featured: false,
         },
@@ -237,7 +237,7 @@ export const siteContent: Record<Language, SiteContent> = {
       title: 'Hands-on experience where',
       titleEm: 'failure is expensive.',
       lead:
-        'I bring 17+ years in software engineering and more than a decade in payment platforms, helping teams ship changes with technical depth and production awareness.',
+        'I bring 17+ years in software engineering and 11+ years on the CenPOS payment platform (acquired by Elavon, a U.S. Bank subsidiary), helping teams ship changes with technical depth and production awareness.',
       stats: [
         { target: 17, suffix: '+', label: 'years in software engineering' },
         { target: 11, suffix: '+', label: 'years in payment platforms' },
@@ -249,7 +249,7 @@ export const siteContent: Record<Language, SiteContent> = {
           num: '01',
           title: 'Payment platform depth',
           description:
-            'Experience across transaction connectors, formatters, routing, pre-authorization logic, and downstream payment-network integrations.',
+            'Experience across entry connectors, formatters, routing, and pre-authorization logic, plus host integrations with major processors and acquirers like Fiserv, TSYS, and Chase Paymentech.',
         },
         {
           num: '02',
@@ -267,7 +267,7 @@ export const siteContent: Record<Language, SiteContent> = {
           num: '04',
           title: 'Pragmatic cloud range',
           description:
-            'AWS certified, Azure-focused, and comfortable bridging backend systems with Node.js, Vue.js, Laravel, and front-end delivery when needed.',
+            'AWS Certified Cloud Practitioner (CLF-C02), actively upskilling in Azure and DevOps (containers, Kubernetes, CI/CD), and comfortable bridging backend systems with Node.js, Vue.js, and Laravel when needed.',
         },
       ],
     },
@@ -283,6 +283,7 @@ export const siteContent: Record<Language, SiteContent> = {
         { name: 'ASP.NET Core', category: 'backend' },
         { name: 'Web API', category: 'backend' },
         { name: 'SQL Server', category: 'backend' },
+        { name: 'ISO 8583', category: 'backend' },
         { name: 'OpenID Connect', category: 'identity' },
         { name: 'OAuth 2.0', category: 'identity' },
         { name: 'PCI-DSS mindset', category: 'identity' },
@@ -437,7 +438,7 @@ export const siteContent: Record<Language, SiteContent> = {
           title: 'Pagos e',
           titleEm: 'integraciones.',
           description:
-            'Flujos transaccionales orientados a mensajes, logica de routing, conectividad con gateways y el rigor operativo que requieren los entornos de pago.',
+            'Flujos transaccionales orientados a mensajes, logica de routing e integraciones host ISO 8583 / XML con procesadores y adquirentes como Fiserv, Elavon, TSYS y Chase Paymentech, con el rigor operativo que exigen los entornos de pago.',
           bullets: [],
           featured: false,
         },
@@ -459,7 +460,7 @@ export const siteContent: Record<Language, SiteContent> = {
       title: 'Experiencia directa donde',
       titleEm: 'fallar cuesta caro.',
       lead:
-        'Aporto 17+ años en ingenieria de software y mas de una decada en plataformas de pago, ayudando a los equipos a entregar cambios con profundidad tecnica y criterio de produccion.',
+        'Aporto 17+ años en ingenieria de software y 11+ años en la plataforma de pagos CenPOS (adquirida por Elavon, subsidiaria de U.S. Bank), ayudando a los equipos a entregar cambios con profundidad tecnica y criterio de produccion.',
       stats: [
         { target: 17, suffix: '+', label: 'años en ingenieria de software' },
         { target: 11, suffix: '+', label: 'años en plataformas de pago' },
@@ -471,7 +472,7 @@ export const siteContent: Record<Language, SiteContent> = {
           num: '01',
           title: 'Profundidad en plataformas de pago',
           description:
-            'Experiencia en conectores transaccionales, formateadores, routing, logica de preautorizacion e integraciones con redes y sistemas de pago.',
+            'Experiencia en conectores de entrada, formateadores, routing y logica de preautorizacion, ademas de integraciones host con procesadores y adquirentes como Fiserv, TSYS y Chase Paymentech.',
         },
         {
           num: '02',
@@ -489,7 +490,7 @@ export const siteContent: Record<Language, SiteContent> = {
           num: '04',
           title: 'Cloud pragmatica y stack amplio',
           description:
-            'Certificacion AWS, foco actual en Azure y soltura para conectar sistemas backend con Node.js, Vue.js, Laravel y apoyo front-end cuando hace falta.',
+            'AWS Certified Cloud Practitioner (CLF-C02), en formacion activa en Azure y DevOps (contenedores, Kubernetes, CI/CD), y con soltura para conectar sistemas backend con Node.js, Vue.js y Laravel cuando hace falta.',
         },
       ],
     },
@@ -505,6 +506,7 @@ export const siteContent: Record<Language, SiteContent> = {
         { name: 'ASP.NET Core', category: 'backend' },
         { name: 'Web API', category: 'backend' },
         { name: 'SQL Server', category: 'backend' },
+        { name: 'ISO 8583', category: 'backend' },
         { name: 'OpenID Connect', category: 'identity' },
         { name: 'OAuth 2.0', category: 'identity' },
         { name: 'Enfoque PCI-DSS', category: 'identity' },
